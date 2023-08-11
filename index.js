@@ -7,7 +7,6 @@ function random(number) {
 function changeBackground(e) {
   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
   e.target.style.backgroundColor = rndCol;
-  console.log(e)
 }
 
 btn.addEventListener('click', changeBackground)
@@ -52,3 +51,14 @@ video.addEventListener("click", (e) => {
   video.play();
 });
 box.addEventListener("click", () => box.classList.add("hidden"));
+
+function bgChange() {
+  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  return rndCol;
+}
+
+const containerrr = document.querySelector("#containerrr");
+
+containerrr.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = bgChange();
+});
