@@ -41,3 +41,11 @@ function handleClick(e) {
 
 const container = document.querySelector("#container");
 container.addEventListener("click", handleClick);
+
+const btoon = document.querySelector(".btoon");
+const box = document.querySelector(".box");
+const video = document.querySelector("video");
+
+btoon.addEventListener("click", () => box.classList.remove("hidden"));
+video.addEventListener("click", () => video.play());
+box.addEventListener("click", () => box.classList.add("hidden"));
