@@ -4,10 +4,10 @@ const btn = document.querySelector('button');
         return Math.floor(Math.random() * (number+1));
       }
 
-      function changeBackground() {
+      function changeBackground(e) {
         const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-        document.body.style.backgroundColor = rndCol;
+        e.target.style.backgroundColor = rndCol;
+        console.log(e)
       }
 
-      btn.addEventListener('mouseover', changeBackground)
-      btn.removeEventListener("mouseover", changeBackground);
+      btn.addEventListener('click', changeBackground)
