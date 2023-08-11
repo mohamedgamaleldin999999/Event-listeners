@@ -4,7 +4,7 @@ const btn = document.querySelector('button');
         return Math.floor(Math.random() * (number+1));
       }
 
-      btn.addEventListener('dblclick', () => {
+      btn.addEventListener('mouseout', () => {
         const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
         document.body.style.backgroundColor = rndCol;
       });
