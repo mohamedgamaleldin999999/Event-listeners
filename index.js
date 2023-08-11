@@ -33,3 +33,11 @@ form.addEventListener("submit", (e) => {
     para.textContent = 'M is not a supported initial'
   }
 });
+
+const result = document.querySelector("#result");
+function handleClick(e) {
+  result.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+}
+
+const container = document.querySelector("#container");
+container.addEventListener("click", handleClick);
